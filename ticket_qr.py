@@ -2,9 +2,10 @@ from google.oauth2.service_account import Credentials
 from googleapiclient import discovery
 import qrcode
 import pandas as pd
+import os
 
 
-def create_tickets():
+def create_tickets():       
     creds = Credentials.from_service_account_file("C:\\Users\\saone\\Documents\\Python Stuff\\prod\\z.creds\\cloud_auth_json\\pma-fundraiser-5ec5ad28e215.json")
     doc_id = "1UamPeyq3EpBsXeMfu6SkC2jq7vy7vo3s248t_FqJqPw"
 
