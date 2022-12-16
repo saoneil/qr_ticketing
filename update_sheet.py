@@ -7,7 +7,7 @@ def update_sheet(df):
     
     # set up the google sheet
     scope = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/spreadsheets","https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("C:\\Users\\saone\\Documents\\Python Stuff\\prod\\qr_ticketing\\cloud_auth_json\\pma-fundraiser-5ec5ad28e215.json", scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name("C:\\Users\\saone\\Documents\\Python Stuff\\prod\\z.creds\\cloud_auth_json\\pma-fundraiser-5ec5ad28e215.json", scope)
 
     gc = gspread.authorize(creds)
     sheet = gc.open('Performance Taekwon-Do | Kitchen Party Fundraiser (Responses)').sheet1
