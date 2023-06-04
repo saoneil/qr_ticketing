@@ -1,7 +1,7 @@
 import qrcode
 
 # Set the URL of the Google Form
-form_url = "https://docs.google.com/forms/d/e/1FAIpQLSeny3HURaK43mRtlO_4URKxHyd9wglWq4rTM8RJnUQ1bX1nyg/viewform?usp=sf_link"
+form_url = "https://forms.gle/45oqZ5orCxipq7iE9"
 
 qr = qrcode.QRCode(
   version=1,
@@ -18,4 +18,4 @@ qr.make(fit=True)
 img = qr.make_image(fill_color="black", back_color="white")
 
 # Save the image of the QR code
-img.save("C:\\Users\\saone\\Documents\\Python Stuff\\prod\\qr_ticketing\\signup_qr\\signup_qr.png")
+img.save("C:\\Users\\saone\\Desktop\\signup_qr.png")
