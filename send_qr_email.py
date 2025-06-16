@@ -11,7 +11,7 @@ from googleapiclient import discovery
 
 
 def send_tickets():
-    creds = Credentials.from_service_account_file("C:\\Users\\saone\\Documents\\Python Stuff\\prod\\z.creds\\cloud_auth_json\\pma-fundraiser-5ec5ad28e215.json")
+    creds = Credentials.from_service_account_file("C:\\Users\\saone\\Documents\\python\\prod\\z.creds\\cloud_auth_json\\pma-fundraiser-5ec5ad28e215.json")
     doc_id = "1UamPeyq3EpBsXeMfu6SkC2jq7vy7vo3s248t_FqJqPw"
     service = discovery.build('sheets', 'v4', credentials=creds)
     sheet_info = service.spreadsheets().get(spreadsheetId=doc_id).execute()
@@ -21,7 +21,7 @@ def send_tickets():
     df = pd.DataFrame(rows)
     df = df.iloc[1: , :]
     
-    directory = "C:\\Users\\saone\\Documents\\Python Stuff\\prod\\qr_ticketing\\tickets"
+    directory = "C:\\Users\\saone\\Documents\\python\\prod\\qr_ticketing\\tickets"
     host = os.environ.get('email_host_python')
     username = os.environ.get('email_username_ptkd')
     password = os.environ.get('email_password_ptkd')       

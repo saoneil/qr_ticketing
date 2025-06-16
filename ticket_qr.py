@@ -6,7 +6,7 @@ import os
 
 
 def create_tickets():       
-    creds = Credentials.from_service_account_file("C:\\Users\\saone\\Documents\\Python Stuff\\prod\\z.creds\\cloud_auth_json\\pma-fundraiser-5ec5ad28e215.json")
+    creds = Credentials.from_service_account_file("C:\\Users\\saone\\Documents\\python\\prod\\z.creds\\cloud_auth_json\\pma-fundraiser-5ec5ad28e215.json")
     doc_id = "1UamPeyq3EpBsXeMfu6SkC2jq7vy7vo3s248t_FqJqPw"
 
     service = discovery.build('sheets', 'v4', credentials=creds)
@@ -43,6 +43,6 @@ def create_tickets():
 
             # Save the QR code as an image file
             img = qr.make_image(fill_color="black", back_color="white")
-            img.save(f"C:\\Users\\saone\\Documents\\Python Stuff\\prod\\qr_ticketing\\tickets\\{row[name_index]}, {row[email_index]}, {row[numtix_index]}.png")
+            img.save(f"C:\\Users\\saone\\Documents\\python\\prod\\qr_ticketing\\tickets\\{row[name_index]}, {row[email_index]}, {row[numtix_index]}.png")
 
     return df
