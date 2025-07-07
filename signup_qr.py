@@ -19,6 +19,7 @@ def open_dialog():
     folder_path_label = tk.Label(root, text="Folder Path:")
     folder_path_label.pack()
     folder_path_entry = tk.Entry(root, width=60)
+    folder_path_entry.insert(0, "C:/Users/saone/Desktop/")
     folder_path_entry.pack()
 
     # Generate button
@@ -30,7 +31,7 @@ def generate_qr():
     url = url_entry.get()
     folder_path = folder_path_entry.get()
 
-    folder_path += "\signup_qr.png"
+    folder_path += "/signup_qr.png"
 
     if url and folder_path:
         qr = qrcode.QRCode(
